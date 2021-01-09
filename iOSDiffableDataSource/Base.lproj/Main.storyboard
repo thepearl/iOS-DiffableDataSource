@@ -15,8 +15,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LYf-gl-yWG" userLabel="TopView">
+                                <rect key="frame" x="15" y="59" width="384" height="99.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Diffable Data Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-uK-DeW">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-D7-UN4">
+                                        <rect key="frame" x="0.0" y="43" width="384" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EII-gC-lIw">
+                                <rect key="frame" x="0.0" y="158.5" width="414" height="737.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LYf-gl-yWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Eq6-eC-ajg"/>
+                            <constraint firstItem="LYf-gl-yWG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="NIg-la-5ob"/>
+                            <constraint firstItem="EII-gC-lIw" firstAttribute="top" secondItem="LYf-gl-yWG" secondAttribute="bottom" id="NdD-vG-lW2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EII-gC-lIw" secondAttribute="trailing" id="Of2-83-eFy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LYf-gl-yWG" secondAttribute="trailing" constant="15" id="tK3-M1-cVE"/>
+                            <constraint firstItem="EII-gC-lIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vd0-Yg-WcB"/>
+                            <constraint firstAttribute="bottom" secondItem="EII-gC-lIw" secondAttribute="bottom" id="z14-dB-aWJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
