@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-D7-UN4">
-                                        <rect key="frame" x="0.0" y="43" width="384" height="56"/>
+                                        <rect key="frame" x="0.0" y="43.5" width="384" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                 </subviews>
@@ -48,6 +48,10 @@
                             <constraint firstAttribute="bottom" secondItem="EII-gC-lIw" secondAttribute="bottom" id="z14-dB-aWJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Urp-D7-UN4" id="gsD-rC-8ng"/>
+                        <outlet property="tableView" destination="EII-gC-lIw" id="k1g-uz-MnA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,9 +17,13 @@
 		7ADA00A625AA6C8A0080C0E1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA00A525AA6C8A0080C0E1 /* ViewModel.swift */; };
 		7ADA00A925AA6C930080C0E1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA00A825AA6C930080C0E1 /* Service.swift */; };
 		7ADA00AD25AA6EDC0080C0E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA00AC25AA6EDC0080C0E1 /* Model.swift */; };
+		7ADA00B725AA705F0080C0E1 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA00B525AA705F0080C0E1 /* MovieCell.swift */; };
+		7ADA00B825AA705F0080C0E1 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADA00B625AA705F0080C0E1 /* MovieCell.xib */; };
+		C0D759665B37BC73765F6BF2 /* Pods_iOSDiffableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753D8794233AEEBE25456211 /* Pods_iOSDiffableDataSource.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		753D8794233AEEBE25456211 /* Pods_iOSDiffableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDiffableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A821D3C25AA681700DE5676 /* iOSDiffableDataSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDiffableDataSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A821D3F25AA681700DE5676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A821D4325AA681700DE5676 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,10 @@
 		7ADA00A525AA6C8A0080C0E1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7ADA00A825AA6C930080C0E1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7ADA00AC25AA6EDC0080C0E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7ADA00B525AA705F0080C0E1 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		7ADA00B625AA705F0080C0E1 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		BE9701F806BAB4992B33E144 /* Pods-iOSDiffableDataSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDiffableDataSource.debug.xcconfig"; path = "Target Support Files/Pods-iOSDiffableDataSource/Pods-iOSDiffableDataSource.debug.xcconfig"; sourceTree = "<group>"; };
+		EBCDA9D43DC68FBACDE5CAB9 /* Pods-iOSDiffableDataSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDiffableDataSource.release.xcconfig"; path = "Target Support Files/Pods-iOSDiffableDataSource/Pods-iOSDiffableDataSource.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D759665B37BC73765F6BF2 /* Pods_iOSDiffableDataSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3014B01B7597CE172D1E1796 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				753D8794233AEEBE25456211 /* Pods_iOSDiffableDataSource.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73247B0D432EC1007C80DE4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE9701F806BAB4992B33E144 /* Pods-iOSDiffableDataSource.debug.xcconfig */,
+				EBCDA9D43DC68FBACDE5CAB9 /* Pods-iOSDiffableDataSource.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7A821D3325AA681700DE5676 = {
 			isa = PBXGroup;
 			children = (
 				7A821D3E25AA681700DE5676 /* iOSDiffableDataSource */,
 				7A821D3D25AA681700DE5676 /* Products */,
+				73247B0D432EC1007C80DE4F /* Pods */,
+				3014B01B7597CE172D1E1796 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,14 +93,10 @@
 		7A821D3E25AA681700DE5676 /* iOSDiffableDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				7A821D3F25AA681700DE5676 /* AppDelegate.swift */,
-				7A821D5525AA691C00DE5676 /* Constants.swift */,
-				7A821D5825AA692400DE5676 /* Extensions.swift */,
+				7ADA00B025AA6F560080C0E1 /* Configurations */,
+				7ADA00AF25AA6F490080C0E1 /* Helpers */,
 				7A821D5B25AA69C400DE5676 /* Component */,
-				7A821D4525AA681700DE5676 /* Main.storyboard */,
-				7A821D4825AA681A00DE5676 /* Assets.xcassets */,
-				7A821D4A25AA681A00DE5676 /* LaunchScreen.storyboard */,
-				7A821D4D25AA681A00DE5676 /* Info.plist */,
+				7ADA00B125AA6F730080C0E1 /* Storyboards */,
 			);
 			path = iOSDiffableDataSource;
 			sourceTree = "<group>";
@@ -87,6 +112,44 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		7ADA00AF25AA6F490080C0E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A821D5825AA692400DE5676 /* Extensions.swift */,
+				7A821D5525AA691C00DE5676 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7ADA00B025AA6F560080C0E1 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				7A821D4825AA681A00DE5676 /* Assets.xcassets */,
+				7A821D4D25AA681A00DE5676 /* Info.plist */,
+				7A821D3F25AA681700DE5676 /* AppDelegate.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		7ADA00B125AA6F730080C0E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7ADA00B425AA704A0080C0E1 /* Cells */,
+				7A821D4525AA681700DE5676 /* Main.storyboard */,
+				7A821D4A25AA681A00DE5676 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7ADA00B425AA704A0080C0E1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7ADA00B525AA705F0080C0E1 /* MovieCell.swift */,
+				7ADA00B625AA705F0080C0E1 /* MovieCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A821D5025AA681A00DE5676 /* Build configuration list for PBXNativeTarget "iOSDiffableDataSource" */;
 			buildPhases = (
+				58F6997E77284B8663BD1A20 /* [CP] Check Pods Manifest.lock */,
 				7A821D3825AA681700DE5676 /* Sources */,
 				7A821D3925AA681700DE5676 /* Frameworks */,
 				7A821D3A25AA681700DE5676 /* Resources */,
+				25E4F29F0774BAE8C7558F30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,11 +211,54 @@
 			files = (
 				7A821D4C25AA681A00DE5676 /* LaunchScreen.storyboard in Resources */,
 				7A821D4925AA681A00DE5676 /* Assets.xcassets in Resources */,
+				7ADA00B825AA705F0080C0E1 /* MovieCell.xib in Resources */,
 				7A821D4725AA681700DE5676 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25E4F29F0774BAE8C7558F30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSDiffableDataSource/Pods-iOSDiffableDataSource-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSDiffableDataSource/Pods-iOSDiffableDataSource-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSDiffableDataSource/Pods-iOSDiffableDataSource-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58F6997E77284B8663BD1A20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSDiffableDataSource-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A821D3825AA681700DE5676 /* Sources */ = {
@@ -159,6 +267,7 @@
 			files = (
 				7ADA00AD25AA6EDC0080C0E1 /* Model.swift in Sources */,
 				7ADA00A625AA6C8A0080C0E1 /* ViewModel.swift in Sources */,
+				7ADA00B725AA705F0080C0E1 /* MovieCell.swift in Sources */,
 				7A821D4425AA681700DE5676 /* MainView.swift in Sources */,
 				7A821D4025AA681700DE5676 /* AppDelegate.swift in Sources */,
 				7A821D5625AA691C00DE5676 /* Constants.swift in Sources */,
@@ -307,12 +416,13 @@
 		};
 		7A821D5125AA681A00DE5676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE9701F806BAB4992B33E144 /* Pods-iOSDiffableDataSource.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDMNH7ZR7U;
-				INFOPLIST_FILE = iOSDiffableDataSource/Info.plist;
+				INFOPLIST_FILE = iOSDiffableDataSource/configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,12 +436,13 @@
 		};
 		7A821D5225AA681A00DE5676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBCDA9D43DC68FBACDE5CAB9 /* Pods-iOSDiffableDataSource.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BDMNH7ZR7U;
-				INFOPLIST_FILE = iOSDiffableDataSource/Info.plist;
+				INFOPLIST_FILE = iOSDiffableDataSource/configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
