@@ -16,9 +16,10 @@ class Service
     private init(){}
     
     func fetchFilms(for keyWordSearch: String, completionHandler: @escaping ([Result]) -> Void) {
-        let url = URL(string: endpoint + API_KEY + "/" + keyWordSearch)!
+        
+        guard let endpoint = URL(string: endpoint + API_KEY + "/" + keyWordSearch) else { return }
 
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: endpoint, completionHandler: { (data, response, error) in
           if let error = error {
             print("Error with fetching films: \(error)")
             return

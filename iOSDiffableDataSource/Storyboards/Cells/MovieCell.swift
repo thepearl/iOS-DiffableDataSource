@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieCell: UITableViewCell
 {
 
-    var movie: Result!
+    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieNameLabel: UILabel!
+    @IBOutlet weak var movieDetailsLabel: UILabel!
+    
+    var movieObject: Result!
     {
         didSet
         {
@@ -25,6 +30,19 @@ class MovieCell: UITableViewCell
     
     func setupData()
     {
+        guard let unwrappedMovieName = movieObject.title, let unwrappedMovieDetails = movieObject.resultDescription else { return }
         
+        movieNameLabel.text = unwrappedMovieName
+        movieDetailsLabel.text = unwrappedMovieDetails
+        
+        if let unwrappedMovieImage = movieObject.image, let imageURL = URL(string: unwrappedMovieImage)
+        {
+            movieImageView.activateSdWebImageLoader()
+            movieImageView.sd_setImage(with: imageURL, completed: nil)
+        }
+        else
+        {
+            movieImageView.image = UIImage(named: "placeholder-image")
+        }
     }
 }

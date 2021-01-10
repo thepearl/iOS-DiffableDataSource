@@ -12,21 +12,38 @@ class ViewModel
 {
     var cancellables: Set<AnyCancellable> = []
 
-    let singleton = Service.sharedInstance
-    @Published var keyWordSearch: String = ""
-
     init()
     {
-        $keyWordSearch.receive(on: RunLoop.main).debounce(for: .seconds(1), scheduler: RunLoop.main)
+        $keyWordSearch.receive(on: RunLoop.main).debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { (_) in
                 self.fetchMovies()
             }.store(in: &cancellables)
     }
+        
+    let serviceProvider = Service.sharedInstance
+    
+    @Published var keyWordSearch: String = ""
+    
+    var diffableDataSource: MoviesTableViewDiffableDataSource!
+    var snapshot = NSDiffableDataSourceSnapshot<String?, Result>()
     
     func fetchMovies()
     {
-        singleton.fetchFilms(for: keyWordSearch) { (results) in
-            print(results)
+        serviceProvider.fetchFilms(for: keyWordSearch) { (results) in
+            guard self.diffableDataSource != nil else { return }
+            
+            if results.isEmpty
+            {
+                self.snapshot.deleteAllItems()
+                self.snapshot.appendSections([""])
+                self.diffableDataSource.apply(self.snapshot, animatingDifferences: true)
+                return
+            }
+            
+            self.snapshot.deleteAllItems()
+            self.snapshot.appendSections([""])
+            self.snapshot.appendItems(results, toSection: "")
+            self.diffableDataSource.apply(self.snapshot, animatingDifferences: true)
         }
     }
 }
