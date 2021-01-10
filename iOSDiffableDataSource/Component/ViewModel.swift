@@ -32,16 +32,15 @@ class ViewModel
         serviceProvider.fetchFilms(for: keyWordSearch) { (results) in
             guard self.diffableDataSource != nil else { return }
             
+            self.snapshot.deleteAllItems()
+            self.snapshot.appendSections([""])
+            
             if results.isEmpty
             {
-                self.snapshot.deleteAllItems()
-                self.snapshot.appendSections([""])
                 self.diffableDataSource.apply(self.snapshot, animatingDifferences: true)
                 return
             }
-            
-            self.snapshot.deleteAllItems()
-            self.snapshot.appendSections([""])
+        
             self.snapshot.appendItems(results, toSection: "")
             self.diffableDataSource.apply(self.snapshot, animatingDifferences: true)
         }

@@ -17,27 +17,32 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="W71-d4-RWR" userLabel="Container">
-                        <rect key="frame" x="15" y="5" width="332" height="66"/>
+                        <rect key="frame" x="15" y="10" width="332" height="60"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OVa-K0-0GL">
-                                <rect key="frame" x="0.0" y="8" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Aas-I1-zgZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="Aas-I1-zgZ"/>
                                     <constraint firstAttribute="width" secondItem="OVa-K0-0GL" secondAttribute="height" id="uhW-fB-NwK"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pdi-tQ-8sd" userLabel="Infos">
-                                <rect key="frame" x="65" y="9" width="267" height="48.5"/>
+                                <rect key="frame" x="75" y="7" width="257" height="46"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-PY-R0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="267" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="257" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvW-sR-nMY">
-                                        <rect key="frame" x="0.0" y="29" width="267" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <rect key="frame" x="0.0" y="29" width="257" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -48,9 +53,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="W71-d4-RWR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Ayh-8O-ccj"/>
-                    <constraint firstItem="W71-d4-RWR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="RO8-Wh-oDD"/>
+                    <constraint firstItem="W71-d4-RWR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="RO8-Wh-oDD"/>
                     <constraint firstAttribute="trailing" secondItem="W71-d4-RWR" secondAttribute="trailing" constant="15" id="bZ4-PY-sLl"/>
-                    <constraint firstAttribute="bottom" secondItem="W71-d4-RWR" secondAttribute="bottom" constant="5" id="sbg-Sj-6yq"/>
+                    <constraint firstAttribute="bottom" secondItem="W71-d4-RWR" secondAttribute="bottom" constant="10" id="sbg-Sj-6yq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
