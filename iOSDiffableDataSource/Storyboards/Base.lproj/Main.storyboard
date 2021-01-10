@@ -28,6 +28,9 @@
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-D7-UN4">
                                         <rect key="frame" x="0.0" y="43.5" width="384" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Ten-X8-Qpm"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                             </stackView>
